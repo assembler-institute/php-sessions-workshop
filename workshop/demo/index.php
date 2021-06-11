@@ -38,23 +38,17 @@
       <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
       <div class="form-floating">
-        <input name="email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com" data-bs-toggle="tooltip" data-bs-html="true" title="<em>Tooltip</em> <u>with</u> <b>HTML</b>">
+        <input name="email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com" data-bs-toggle="tooltip" data-bs-html="true" title="imassembler@assemblerschool.com">
         <label for="floatingInput">Email address</label>
       </div>
       <div class="form-floating">
-        <input name="pass" type="password" class="form-control" id="floatingPassword" placeholder="Password">
+        <input name="pass" type="password" class="form-control" id="floatingPassword" placeholder="Password" title="Assemb13r">
         <label for="floatingPassword">Password</label>
       </div>
       <div class='alert alert-danger' role='alert'>Error Message</div>
       <div class='alert alert-primary' role='alert'>Session closed</div>
       <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
       <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
-
-      <ul class="list-group">
-        <li class="list-group-item">imassembler@assemblerschool.com</li>
-        <li class="list-group-item">Assemb13r</li>
-      </ul>
-
     </form>
   </main>
 
