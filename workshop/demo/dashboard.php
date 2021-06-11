@@ -1,13 +1,3 @@
-<?php
-// Start session
-session_start();
-
-if (!isset($_SESSION["email"])) {
-  $_SESSION["loginError"] = "You don't have permission to enter the dashboard. Please Login.";
-  header("Location:./index.php");
-}
-?>
-
 <!doctype html>
 <html lang="en">
 
@@ -53,11 +43,11 @@ if (!isset($_SESSION["email"])) {
     </button>
     <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
     <div class="badge bg-primary text-wrap mx-2">
-      <?= $_SESSION["email"] ?>
+      User Email
     </div>
     <ul class="navbar-nav px-3">
       <li class="nav-item text-nowrap">
-        <a class="nav-link" href="./modules/logout.php">Sign out</a>
+        <a class="nav-link" href="#">Sign out</a>
       </li>
     </ul>
   </header>
@@ -142,7 +132,7 @@ if (!isset($_SESSION["email"])) {
 
       <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-          <h1 class="h2">Welcome <?= strstr($_SESSION["email"], '@', true) ?>, this is our Dashboard</h1>
+          <h1 class="h2">Welcome <span class='text-primary'>user</span>, this is our Dashboard</h1>
           <div class="btn-toolbar mb-2 mb-md-0">
             <div class="btn-group me-2">
               <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
