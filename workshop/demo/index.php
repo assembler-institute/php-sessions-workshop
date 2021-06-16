@@ -1,26 +1,8 @@
 <?php
-// Start session
-session_start();
+require_once("./modules/sessioncontrol.php");
 
-// Check for error session variable
-if (isset($_SESSION["loginError"])) {
-  $errorText = $_SESSION["loginError"];
-  unset($_SESSION["loginError"]);
-}
-
-// Check for info session variable
-if (isset($_SESSION["loginInfo"])) {
-  $infoText = $_SESSION["loginInfo"];
-  unset($_SESSION["loginInfo"]);
-}
-
-// Check for logout
-if (isset($_GET["logout"]) && !isset($_SESSION["enail"])) {
-  $logoutText = "Logout succesful";
-} elseif (isset($_GET["logout"])) {
-  $errorText = "There was an error logging out";
-}
-
+//Check for session and error / info messages
+$alert = checkSession();
 
 ?>
 
@@ -31,8 +13,6 @@ if (isset($_GET["logout"]) && !isset($_SESSION["enail"])) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>[PHP - Sessions] - Login Demo</title>
-
-
 
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
@@ -73,14 +53,12 @@ if (isset($_GET["logout"]) && !isset($_SESSION["enail"])) {
         <input name="pass" type="password" class="form-control" id="floatingPassword" placeholder="Password" title="Assemb13r">
         <label for="floatingPassword">Password</label>
       </div>
-      <?= isset($errorText) ? "<div class='alert alert-danger' role='alert'>$errorText</div>" : "" ?>
-      <?= isset($logoutText) ? "<div class='alert alert-primary' role='alert'>$logoutText</div>" : "" ?>
+      <?= ($alert) ? "<div class='alert alert-$alert[type] role='alert'>$alert[text]</div>" : "" ?>
       <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
       <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
 
     </form>
   </main>
-
 
   <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>

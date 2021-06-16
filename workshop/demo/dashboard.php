@@ -1,11 +1,6 @@
 <?php
-// Start session
-session_start();
-
-if (!isset($_SESSION["email"])) {
-  $_SESSION["loginError"] = "You don't have permission to enter the dashboard. Please Login.";
-  header("Location:./index.php");
-}
+require_once("./modules/sessioncontrol.php");
+checkSession();
 ?>
 
 <!doctype html>
