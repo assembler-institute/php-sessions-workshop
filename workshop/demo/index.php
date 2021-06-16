@@ -45,8 +45,7 @@
         <input name="pass" type="password" class="form-control" id="floatingPassword" placeholder="Password" title="Assemb13r">
         <label for="floatingPassword">Password</label>
       </div>
-      <div class='alert alert-danger' role='alert'>Error Message</div>
-      <div class='alert alert-primary' role='alert'>Session closed</div>
+      <div class='alert alert-primary' role='alert'>Error / Info Message</div>
       <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
       <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
     </form>
