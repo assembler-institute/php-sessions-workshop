@@ -46,7 +46,7 @@ function destroySession()
     header("Location:../index.php?logout=true");
 }
 
-function createSession()
+function authUser()
 {
     // Start session
     session_start();
