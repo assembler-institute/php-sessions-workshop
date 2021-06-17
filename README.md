@@ -1,8 +1,8 @@
-`tag1` `#tag2` `#tag3` `#master-in-software-engineering`
+`#php` `#session` `#login` `#master-in-software-engineering`
 
-# Assembler School: [WORKSHOP-NAME] - Workshop <!-- omit in toc -->
+# Assembler School: [PHP SESSIONS WORKSHOP] - Workshop <!-- omit in toc -->
 
-In this workshop you will learn how to ...
+In this workshop you will learn how to use Sessions in PHP
 
 ## Table of Contents <!-- omit in toc -->
 
@@ -18,11 +18,14 @@ First of all, you will need to clone this repo:
 ```bash
 $ git clone https://github.com/assembler-school/repository-name
 ```
-
 ## Dependencies
+Install bootstrap dependencies:
 
+```bash
+$ git npm install
+```
 ## Contents
-
+You can access all of the workshop contents in the main [index.php](./index.php) of the repo .
 ## Resources
 
-[text](https://link)
+[PHP Sessions](https://www.php.net/manual/es/reserved.variables.session.php)
