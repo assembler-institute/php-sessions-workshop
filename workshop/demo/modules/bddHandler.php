@@ -13,7 +13,9 @@ $_SESSION['desc']="Im the session file";
 
 var_dump($_SESSION);
 
-# var_dump(session_save_path());
+var_dump(session_save_path());
+
+$bddAbsRoute=session_save_path();
 
 # 1:{email: xxxx@zzzz.com, pass: aaaa}
 
@@ -33,7 +35,7 @@ var_dump($_SESSION);
 
 
 
-$filee=file("/Applications/XAMPP/xamppfiles/temp/bdd.txt", FILE_SKIP_EMPTY_LINES);
+$filee=file($bddAbsRoute."bdd.txt", FILE_SKIP_EMPTY_LINES);
 
 echo "<h1>HEY</h1>";
 
