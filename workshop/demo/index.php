@@ -1,13 +1,9 @@
 <?php
-
 require "./modules/functions.php";
-
 session_start();
 
 $redirect = $_SESSION['isRedirecting'];
-
 $error = ( ($redirect && isset($redirect)) ? checkRedirection() : checkSession());
-
 ?>
 
 <!doctype html>
@@ -20,13 +16,11 @@ $error = ( ($redirect && isset($redirect)) ? checkRedirection() : checkSession()
 
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
-
   <!-- Custom styles for this template -->
   <link href="./assets/css/signin.css" rel="stylesheet">
 </head>
 
 <body class="text-center">
-
   <main class="form-signin">
     <form action="./modules/login.php" method="post">
       <img src="../../assets/img/assembler_icon.jfif" width="40" height="40" class="me-3" alt="Assembler School">
