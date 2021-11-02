@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,400,600,700,900&display=swap");
+
+html {
+  font-family: Raleway;
+  scroll-behavior: smooth;
+  background-image: url("./assets/img/aut.gif");
+  background-repeat: no-repeat;
+  background-color: black;
+  background-size: cover;
+}
+
+.header .box {
+  min-height: 10vh;
+}
+
+.main {
+  margin: 10px 30px;
+}
+
+.userlogin .box {
+  margin: 0px 40px;
+  min-height: 3vh;
+  max-width: inherit;
+  justify-content: flex-end;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  transition: all 0.7s;
+}
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 90%;
+  justify-content: space-around;
+  border-radius: 3%;
+  border: solid rgb(65, 12, 12) 2px;
+  text-align: center;
+  margin: 2% 1%;
+  padding: 1%;
+  min-height: 35vh;
+  background-color: rgba(119, 60, 37, 0.459);
+}
+.box .title {
+  color: rgb(221, 202, 118);
+  text-shadow: 1px 3px rgb(196, 120, 85);
+  min-width: 100%;
+  max-height: 10vh;
+  font-size: large;
+  z-index: 1;
+}
+.box .info {
+  color: rgb(221, 202, 118);
+
+  z-index: 1;
+  font-size: medium;
+}
+.box h3 {
+  font-family: monospace;
+  color: rgb(221, 202, 118);
+  text-align: left;
+}
+.btn {
+  outline: rgb(65, 12, 12) solid 1px;
+  color: rgb(221, 202, 118);
+  margin: 0px 20px;
+  background-color: rgba(119, 60, 37, 0.459);
+  padding: 0.5% 2%;
+  font-size: 0.7rem;
+  cursor: pointer;
+  text-align: center;
+
+  height: min-content;
+}
+
+.item {
+  padding: 0.6%;
+  border: solid rgb(221, 202, 118) 2px;
+  color: rgb(221, 202, 118);
+  text-shadow: 1px 3px rgb(196, 120, 85);
+  border-radius: 3%;
+  height: fit-content;
+  max-height: 5vh;
+}
+
+input[type="text"],
+input[type="password"] {
+  color: white;
+  background-color: rgba(119, 60, 37, 0.459);
+}
