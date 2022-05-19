@@ -1,3 +1,14 @@
+<?php
+require "./modules/functions.php";
+
+session_start();
+checkSession();
+
+$user = getUserFromEmail($_SESSION['email']);
+$userEmail = $_SESSION['email'];
+
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -13,23 +24,6 @@
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
 
-  <style>
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      user-select: none;
-    }
-
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-      }
-    }
-  </style>
-
-
   <!-- Custom styles for this template -->
   <link href="./assets/css/dashboard.css" rel="stylesheet">
 </head>
@@ -43,11 +37,11 @@
     </button>
     <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
     <div class="badge bg-primary text-wrap mx-2">
-      User Email
+      <?php echo $userEmail; ?>
     </div>
     <ul class="navbar-nav px-3">
       <li class="nav-item text-nowrap">
-        <a class="nav-link" href="#">Sign out</a>
+        <a class="nav-link" href="./modules/logout.php">Sign out</a>
       </li>
     </ul>
   </header>
@@ -132,7 +126,7 @@
 
       <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-          <h1 class="h2">Welcome <span class='text-primary'>user</span>, this is our Dashboard</h1>
+          <h1 class="h2">Welcome <span class='text-primary'><?php echo $user; ?></span>, this is our Dashboard</h1>
           <div class="btn-toolbar mb-2 mb-md-0">
             <div class="btn-group me-2">
               <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>

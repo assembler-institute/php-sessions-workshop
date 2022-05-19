@@ -1,3 +1,11 @@
+<?php
+require "./modules/functions.php";
+session_start();
+
+$redirect = $_SESSION['isRedirecting'];
+$error = ( ($redirect && isset($redirect)) ? checkRedirection() : checkSession());
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -8,32 +16,13 @@
 
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
-
-  <style>
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      user-select: none;
-    }
-
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-      }
-    }
-  </style>
-
-
   <!-- Custom styles for this template -->
   <link href="./assets/css/signin.css" rel="stylesheet">
 </head>
 
 <body class="text-center">
-
   <main class="form-signin">
-    <form>
+    <form action="./modules/login.php" method="post">
       <img src="../../assets/img/assembler_icon.jfif" width="40" height="40" class="me-3" alt="Assembler School">
       <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
@@ -45,7 +34,7 @@
         <input name="pass" type="password" class="form-control" id="floatingPassword" placeholder="Password" title="Assemb13r">
         <label for="floatingPassword">Password</label>
       </div>
-      <div class='alert alert-primary' role='alert'>Error / Info Message</div>
+      <?= ($error) ? "<div class='alert alert-$error[status]'  role='alert'> $error[message] </div>" : "" ?>
       <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
       <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
     </form>
