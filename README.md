@@ -1,6 +1,6 @@
 `#php` `#session` `#login` `#master-in-software-development`
 
-# Assembler School: [PHP SESSIONS WORKSHOP] - Workshop <!-- omit in toc -->
+# Assembler School: PHP SESSIONS WORKSHOP <!-- omit in toc -->
 
 In this workshop you will learn how to use Sessions in PHP
 
