@@ -1,4 +1,4 @@
-`#php` `#session` `#login` `#master-in-software-engineering`
+`#php` `#session` `#login` `#master-in-software-development`
 
 # Assembler School: [PHP SESSIONS WORKSHOP] - Workshop <!-- omit in toc -->
 
