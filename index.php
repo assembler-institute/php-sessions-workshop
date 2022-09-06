@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/cheatsheet.css">
 </head>
+<?php
+session_start();
+
+header('Location: ./public/index.php ');
+?>
 
 <body class="bg-light">
 
@@ -48,8 +53,9 @@
                     <a class="d-flex align-items-center" href="https://www.php.net/manual/es/book.session.php">Documentation</a>
                 </div>
 
-                <div>
-                    <?php require_once("./workshop/1-introduction.php"); ?>
+                <!--                 <div>
+                    <?php // require_once("./workshop/1-introduction.php"); 
+                    ?>
                 </div>
             </article>
             <article class="my-3" id="create">
@@ -59,7 +65,8 @@
                 </div>
 
                 <div>
-                    <?php require_once("./workshop/2-create.php"); ?>
+                    <?php //  require_once("./workshop/2-create.php"); 
+                    ?>
                 </div>
             </article>
             <article class="my-3" id="read">
@@ -69,7 +76,8 @@
                 </div>
 
                 <div>
-                    <?php require_once("./workshop/3-read.php"); ?>
+                    <?php //  require_once("./workshop/3-read.php"); 
+                    ?>
                 </div>
             </article>
             <article class="my-3" id="modify">
@@ -79,7 +87,8 @@
                 </div>
 
                 <div>
-                    <?php require_once("./workshop/4-modify.php"); ?>
+                    <?php //  require_once("./workshop/4-modify.php"); 
+                    ?>
                 </div>
             </article>
             <article class="my-3" id="destroy">
@@ -89,7 +98,8 @@
                 </div>
 
                 <div>
-                    <?php require_once("./workshop/5-destroy.php"); ?>
+                    <?php //  require_once("./workshop/5-destroy.php"); 
+                    ?>
                 </div>
             </article>
             <article class="my-3" id="demo">
@@ -99,8 +109,9 @@
                 </div>
 
                 <div>
-                    <?php require_once("./workshop/6-demo.php"); ?>
-                </div>
+                    <?php //  require_once("./workshop/6-demo.php"); 
+                    ?>
+                </div> -->
             </article>
         </section>
     </div>
